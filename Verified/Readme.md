@@ -1,12 +1,12 @@
 ## Verified Connector
-Verified is a Software as a Service provider of electronic identification and digital signing. This connector makes it possible to integrate to the API of verified to create suffisticated signing flows within your application.
+Verified is a Software as a Service provider of electronic identification and digital signing. This connector makes it possible to integrate to the API of Verified to create suffisticated signing flows within your application.
 
 ## Publisher: CRM Konsulterna i Sverige AB
 The publisher for this connector is [CRM Konsulterna i Sverige AB](https://crmkonsutlerna.se) on behalf of [Verified](https://verified.eu).
 
 ## Prerequisites
 You will need the following to proceed:
-* [Sign-up](https://verified.eu/en/) for a verified account
+* [Sign-up](https://verified.eu/en/) for a Verified account
 
 ## Supported Operations
 The connector supports the following operations:
@@ -34,7 +34,7 @@ The connector supports the following operations:
 * `Get all descriptors`: Gets all descriptors present in the current company.
 * `Get flow state by envelopeid`: Gets the current flow state of a given envelope.
 * `Get document by id`: Gets document information of a given document.
-* `Delete document by id`: Deteles a document.
+* `Delete document by id`: Deletes a document.
 * `Create envelope - descriptor`: Creates a new envelope based on a specified descriptor.
 * `Get all documents by envelopeid`: Gets all documents related to a given envelope.
 * `Add document to envelope`: Adds a document to a given envelope.
@@ -45,13 +45,13 @@ The connector supports the following operations:
 * `Send notification`: Sends a notification to a given recipient.
 
 ## Obtaining Credentials
-This connector uses Basic Authentication. The user has to present username, password and company ID when creating a connection. Username and password are the same you use to login to the Verified portal.
+This connector uses Basic Authentication. The user has to present username, password and company Id when creating a connection. Username and password are the same you use to login to the Verified portal.
 To get the company Id you have to log in to the Verified portal, select the correct company if you have several and copy the company Id from the URL.
 
 ## Known Issues and Limitations
 The following limitations are currently known.
 - In the beginngin of every flow one has to create an authentication token to be reused in every following step.
-- To add a document one has to send a HTTP request to a certain url.
+- To add a document one has to send an HTTP request to a certain url.
 
 ## Good to know
 There are a few things in how the Verified API works and answers that need some extra handling in Power Automate.
@@ -84,4 +84,4 @@ substring(outputs('Get_envelope_by_id')?['body/flow/id'],6)
 ```
 
 ### Upload Document
-To Upload an actuall document you have to create a file in the Verified API and upload the document hash to the blob URL responded from the Verified API.
+To Upload an actual document you have to create a file in the Verified API and upload the document hash to the blob URL responded from the Verified API.
