@@ -49,7 +49,7 @@ substring(outputs('Get_envelope_by_id')?['body/flow/id'],6)
 ```
 
 ## Actions available
-The connector supports the following operations:
+The connector supports the following actions:
 * `Generate security token`: Generates an authentication Token from the Verified API.
 * `Get company by id`: Gets the Company Information of a given company.
 * `Get all envelope recipients`: Gets all recipients of a given envelope.
