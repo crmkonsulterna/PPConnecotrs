@@ -47,39 +47,3 @@ Here is an example on how to do that
 ```
 substring(outputs('Get_envelope_by_id')?['body/flow/id'],6)
 ```
-
-## Actions available
-The connector supports the following actions:
-* `Generate security token`: Generates an authentication Token from the Verified API.
-* `Get company by id`: Gets the Company Information of a given company.
-* `Get all envelope recipients`: Gets all recipients of a given envelope.
-* `Add recipient to envelope`: Adds a recipient to a given envelope.
-* `Get specific recipient for an envelope`: Gets information about a specific recipient of a given envelope.
-* `Update recipient by id`: Updates a recipient.
-* `Get file URL by id`: Gets the URL to a file.
-* `Get user settings`: Gets user settings of given user.
-* `Get envelope by id`: Gets envelope information of a given envelope.
-* `Delete envelope by id`: Deletes an envelope.
-* `Update envelope settings`: Updates settings of a given envelope.
-* `Update publish status for envelope`: Updates the publish status of a given envelope.
-* `Generate Document from Template`: Generates a document from a preconfigured template.
-* `Set envelope abort status`: Aborts a given envelope.
-* `Get files by document id`: Gets all files associated to a given document.
-* `Add file to document`: Adds a file to a given document.
-* `Get user information`: Gets user information of the currently logged in user.
-* `Set document abort status`: Aborts a given document.
-* `Get descriptor by id`: Gets envelope descriptor information of a given descriptor.
-* `Set envelope trash status`: Sets trash status of a given envelope.
-* `Query all envelopes`: Queries all envelopes in the current company.
-* `Get all descriptors`: Gets all descriptors present in the current company.
-* `Get flow state by envelopeid`: Gets the current flow state of a given envelope.
-* `Get document by id`: Gets document information of a given document.
-* `Delete document by id`: Deletes a document.
-* `Create envelope - descriptor`: Creates a new envelope based on a specified descriptor.
-* `Get all documents by envelopeid`: Gets all documents related to a given envelope.
-* `Add document to envelope`: Adds a document to a given envelope.
-* `Create signature link`: Creates a signature link for a given recipient on a given envelope.
-* `Get file by id`: Gets file information of a given file.
-* `Create envelope - default`: Creates a new envelope based on the default descriptor.
-* `Get default descriptor`: Gets descriptor information of the default descriptor.
-* `Send notification`: Sends a notification to a given recipient.
