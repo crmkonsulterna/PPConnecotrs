@@ -1,4 +1,4 @@
-Verified is a Software as a Service provider of electronic identification and digital signing. This connector makes it possible to integrate to the API of Verified to create suffisticated signing flows within your application.
+Verified is a Software as a Service provider of electronic identification and digital signing. This connector makes it possible to integrate to the API of Verified and create simple and intuitive signing processes within your application.
 
 ## Prerequisites
 You will need the following to proceed:
@@ -9,7 +9,7 @@ This connector uses Basic Authentication. The user has to present username, pass
 To get the company Id you have to log in to the Verified portal, select the correct company if you have several and copy the company Id from the URL.
 
 ## Get started
-A common use case is to start and manage a signing process, i.e. setting up automation for sending documents to be signed to Verified and getting signed documents back on a regular basis. Common actions that are used to start a Verified signing process include Create envelope - descriptor or Create envelope - default, Add document to envelope, Add file to document, Add recipient to envelope and Update publish status for envelope. Common actions that are used in order to check the Verified status for documents include Get envelope by id, Get all documents by envelopeid, Get files by documentid, Get file URL by id. Note that action Generate security token is always used as a first step in order to obtain a security token to be used in the following steps. 
+A common use case is to start and manage a signing process, i.e. setting up automation for sending documents to be signed to Verified and getting signed documents back on a regular basis. Common actions that are used to start a Verified signing process include Create envelope - descriptor or Create envelope - default, Add document to envelope, Add file to document, Add recipient to envelope and Update publish status for envelope. Common actions that are used in order to check the Verified status for documents include Get envelope by id, Get all documents by envelope id, Get files by document id, Get file URL by id. Note that action Generate security token is always used as a first step in order to obtain a security token to be used in the following steps. 
 
 ## Known Issues and Limitations
 The following limitations are currently known.
@@ -18,11 +18,11 @@ The following limitations are currently known.
 
 ## FAQ
 
-### How do I upload a document to Verfied?
+### How do I upload a document to Verified?
 To Upload an actual document you have to create a file in the Verified API and upload the document hash to the blob URL responded from the Verified API.
 
-### How do I get hold of the envelope after using the Get Envelop Id action?
-The steps that create an envelop respond with an uid, which is a complete path to the envelop (example: "/envelopes/ABCDE"). For other steps one does only need the last part of the uid (which is the actual envelop Id, in our example "ABCDE"). 
+### How do I get hold of the envelope after using the Get Envelope id action?
+The steps that create an envelope respond with an uid, which is a complete path to the envelope (example: "/envelopes/ABCDE"). For other steps one does only need the last part of the uid (which is the actual envelope id, in our example "ABCDE"). 
 
 Here is an example on how to do that
 
@@ -30,8 +30,8 @@ Here is an example on how to do that
 substring(outputs('Create_new_default_envelope')?['body/uid'],11)
 ```
 
-### How do I get hold of the Document Id after using the Add document to envelope action? 
-The steps that create a document respond with the Location of the new document in the header. The Location is the complete path to the document (example: "/api/envelopes/ABCDE/documents/FGHIJ"). Only the document Id (in our case: FGHIJ) is needed for following steps.
+### How do I get hold of the document id after using the Add document to envelope action? 
+The steps that create a document respond with the Location of the new document in the header. The Location is the complete path to the document (example: "/api/envelopes/ABCDE/documents/FGHIJ"). Only the document id (in our case: FGHIJ) is needed for following steps.
 
 Here is an example on how to do that
 
